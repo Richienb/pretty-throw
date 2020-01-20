@@ -1,6 +1,6 @@
 {
 	"name": "pretty-throw",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Throw formatted errors.",
 	"repository": "https://github.com/Richienb/pretty-throw.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
