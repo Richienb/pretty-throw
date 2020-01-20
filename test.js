@@ -1,13 +1,7 @@
 const test = require("ava")
-const theModule = require(".")
+const prettyThrow = require(".")
 
 test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	console.log = t.snapshot
+	prettyThrow(new Error("Test error."), { exit: false })
 })

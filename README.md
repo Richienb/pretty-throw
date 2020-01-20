@@ -1,41 +1,43 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Pretty throw [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/pretty-throw/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/pretty-throw)
 
-My awesome module.
+Throw formatted errors.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/pretty-throw.png)](https://npmjs.com/package/pretty-throw)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install pretty-throw
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
-
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const prettyThrow = require("pretty-throw");
+prettyThrow(new Error("Test error."));
 ```
+
+### Output
+
+![Example output](media/example.png)
 
 ## API
 
-### theModule(input, options?)
+### prettyThrow(error, options?)
 
-#### input
+#### error
 
-Type: `string`
+Type: `Error`
 
-Lorem ipsum.
+The error to be thrown.
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### exit
 
-Type: `string`\
-Default: `rainbows`
+Type: `boolean`\
+Default: `true`
 
-Lorem ipsum.
+Exit the process after displaying the error.

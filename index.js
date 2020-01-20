@@ -1,7 +1,13 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const PrettyError = require("pretty-error")
+const MaterialTheme = require("pretty-error-themes/material")
+const crossExit = require("cross-exit")
 
-	return `${input} & ${postfix}`
+module.exports = (error, { exit = true } = {}) => {
+	const pe = new PrettyError()
+	pe.appendStyle(MaterialTheme)
+	const rendered = pe.render(error)
+	console.log(rendered)
+	if (exit) crossExit(1)
 }

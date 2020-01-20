@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "pretty-throw",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Throw formatted errors.",
+	"repository": "https://github.com/Richienb/pretty-throw.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -11,14 +11,18 @@
 		"index.d.ts"
 	],
 	"engines": {
-		"node": ">=10"
+		"node": ">=6"
 	},
 	"scripts": {
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
 	"keywords": [],
-	"dependencies": {},
+	"dependencies": {
+		"cross-exit": "^1.0.0",
+		"pretty-error": "^2.1.1",
+		"pretty-error-themes": "^1.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.0.0",
 		"eslint-config-richienb": "^0.3.0",
